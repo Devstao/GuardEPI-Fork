@@ -12,14 +12,15 @@ from celery.app.task import Task
 from dotenv import load_dotenv
 from flask_mail import Mail
 from flask_migrate import Migrate, init
-from flask_session import Session
+
+# from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 from flask_talisman import Talisman
 from quart import Quart
 from quart_auth import QuartAuth as LoginManager
 from quart_cors import cors
-from redis import Redis
 
+# from redis import Redis
 from app.logs.setup import initialize_logging
 
 __all__ = ["patch"]
@@ -36,15 +37,15 @@ app = Quart(__name__, template_folder=template_folder, static_folder=static_fold
 mail = Mail()
 db = SQLAlchemy()
 
-app.config.update(
-    dict(
-        SESSION_TYPE="redis",
-        SESSION_REDIS=Redis.from_url(os.environ.get("REDIS_URI")),
-    )
-)
+# app.config.update(
+#     dict(
+#         SESSION_TYPE="redis",
+#         SESSION_REDIS=Redis.from_url(os.environ.get("REDIS_URI")),
+#     )
+# )
 
 
-Session(app)
+# Session(app)
 celery_app = None
 migrate_ = Migrate()
 login_manager = LoginManager()
