@@ -19,6 +19,7 @@ from flask_talisman import Talisman
 from quart import Quart
 from quart_auth import QuartAuth as LoginManager
 from quart_cors import cors
+from redis import Redis
 
 # from redis import Redis
 from app.logs.setup import initialize_logging
@@ -37,12 +38,12 @@ app = Quart(__name__, template_folder=template_folder, static_folder=static_fold
 mail = Mail()
 db = SQLAlchemy()
 
-# app.config.update(
-#     dict(
-#         SESSION_TYPE="redis",
-#         SESSION_REDIS=Redis.from_url(os.environ.get("REDIS_URI")),
-#     )
-# )
+app.config.update(
+    dict(
+        SESSION_TYPE="redis",
+        SESSION_REDIS=Redis.from_url(os.environ.get("REDIS_URI")),
+    )
+)
 
 
 # Session(app)
