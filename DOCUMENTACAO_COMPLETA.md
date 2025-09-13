@@ -315,14 +315,4 @@ Celery Worker → Redis Broker → Background Tasks:
 
 ---
 
-## 📞 Contato
-
-Para mais informações sobre o GuardEPI:
-- **Email**: contato@robotz.dev
-- **Website**: https://guardepi.com.br
-- **Documentação Técnica**: Este repositório
-- **Suporte**: Abra uma issue neste repositório
-
----
-
 *Esta documentação está em constante evolução. Contribuições são bem-vindas!*
