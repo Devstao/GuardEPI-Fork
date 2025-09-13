@@ -77,8 +77,4 @@ O sistema conta com as seguintes funcionalidades:
 
 Para instruções detalhadas, consulte a [documentação de como executar](./CONTRIBUTING.md).
 
-### 💬 Suporte
 
-E o que você precisar, basta estar entrando em contato em [Nosso Email](mailto:contato@robotz.dev)
-
----
